@@ -88,7 +88,9 @@ p {
 }
 
 .btn {
-    margin-top: 35px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     padding: 16px 35px;
     background: transparent;
     border: 2px solid #fff;
@@ -114,6 +116,15 @@ p {
     font-size: 1.3rem;
 }
 
+/* Social Buttons Container */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
 /* Footer styling */
 footer {
     margin-top: 40px;
@@ -135,7 +146,11 @@ footer {
     <p class="quote" id="quote">"Life in silence"</p>
     <p>Remember my name: <span class="highlight">Laurin Polla</span></p>
 
-    <button class="btn" onclick="showEmail()">Contact</button>
+    <div class="social-buttons">
+        <button class="btn" onclick="showEmail()">Contact</button>
+        <button class="btn" onclick="window.open('https://www.instagram.com/laurin.sgg','_blank')">Instagram</button>
+    </div>
+
     <p class="email" id="email" onclick="copyEmail()">laurin.polla@yahoo.com</p>
 </div>
 
