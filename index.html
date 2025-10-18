@@ -20,22 +20,22 @@
         position: relative;
         z-index: 1;
         background: rgba(0,0,0,0.75);
-        padding: 50px 40px;
-        border-radius: 20px;
-        max-width: 600px;
+        padding: 70px 60px;
+        border-radius: 25px;
+        max-width: 700px;
         margin: 50px auto;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        box-shadow: 0 15px 50px rgba(0,0,0,0.6);
         text-align: center;
         animation: fadeIn 2s ease forwards;
         transition: transform 0.3s ease;
     }
 
-    .container:hover { transform: scale(1.02); }
+    .container:hover { transform: scale(1.03); }
 
     h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 3rem;
-        margin-bottom: 15px;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
         letter-spacing: 2px;
         transition: color 0.5s;
     }
@@ -43,8 +43,8 @@
     h1:hover { color: #bbb; }
 
     p {
-        font-size: 1.2rem;
-        margin: 10px 0;
+        font-size: 1.4rem;
+        margin: 15px 0;
         transition: color 0.5s;
     }
 
@@ -53,8 +53,8 @@
     .quote {
         font-style: italic;
         color: #ccc;
-        margin: 20px 0;
-        min-height: 30px;
+        margin: 25px 0;
+        min-height: 40px;
         transition: color 0.5s, transform 0.5s;
     }
 
@@ -65,14 +65,14 @@
     }
 
     .btn {
-        margin-top: 25px;
-        padding: 12px 25px;
+        margin-top: 30px;
+        padding: 15px 30px;
         background: transparent;
         border: 2px solid #fff;
         color: #fff;
-        font-size: 1rem;
+        font-size: 1.2rem;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 10px;
         transition: all 0.3s ease;
     }
 
@@ -82,30 +82,13 @@
     }
 
     .email {
-        margin-top: 15px;
+        margin-top: 20px;
         font-weight: 500;
         color: #bbb;
         display: none;
         word-break: break-all;
         cursor: pointer;
     }
-
-    .top-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: rgba(255,255,255,0.1);
-        border: 2px solid #fff;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-weight: bold;
-        z-index: 2;
-        transition: all 0.3s ease;
-    }
-
-    .top-btn:hover { background: #fff; color: #000; }
 
     @keyframes fadeIn { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
 </style>
@@ -123,8 +106,6 @@
     <button class="btn" onclick="showEmail()">Contact</button>
     <p class="email" id="email" onclick="copyEmail()">laurin.polla@yahoo.com</p>
 </div>
-
-<button class="top-btn" onclick="scrollTop()">↑</button>
 
 <script>
 /* Particle Effect */
@@ -187,7 +168,7 @@ setInterval(() => {
         quoteEl.style.opacity = 1;
     }, 500);
     quoteIndex = (quoteIndex + 1) % quotes.length;
-}, 5000); // 5 seconds per quote
+}, 8000); // 8 seconds per quote
 
 /* Email Reveal and Copy */
 function showEmail(){
@@ -199,9 +180,6 @@ function copyEmail(){
     navigator.clipboard.writeText(email);
     alert('Email copied to clipboard!');
 }
-
-/* Scroll Top */
-function scrollTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
 </script>
 
 </body>
