@@ -1,130 +1,71 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laurin Polla</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 2rem;
+            height: 100vh;
+            color: #333;
         }
 
-        header {
-            margin-bottom: 2rem;
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        h1:hover {
-            transform: scale(1.05);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
         }
 
         p {
             font-size: 1.2rem;
-            margin: 0.5em 0;
-            line-height: 1.6;
+            margin: 0.5rem 0;
         }
 
         .quote {
             font-style: italic;
-            color: #ffd700;
-            font-size: 1.3rem;
-            margin-top: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .quote:hover {
-            color: #ffffff;
+            color: #555;
+            margin-top: 1rem;
         }
 
         .highlight {
-            font-weight: bold;
-            color: #ffeb3b;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-        }
-
-        /* Kontakt-Button */
-        .contact-button {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 0.8rem 1.8rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #6a11cb;
-            background-color: #ffeb3b;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .contact-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-
-        footer {
-            position: absolute;
-            bottom: 1rem;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .quote {
-                font-size: 1.1rem;
-            }
-
-            .contact-button {
-                font-size: 1rem;
-                padding: 0.6rem 1.4rem;
-            }
+            font-weight: 700;
+            color: #ff6f61;
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class="card">
         <h1>Laurin Polla</h1>
-        <p>Geboren am: 22.12.2009</p>
-    </header>
-    <main>
+        <p>Born on: December 22, 2009</p>
         <p class="quote">"Life in silence"</p>
-        <p>Merkt euch meinen Namen: <span class="highlight">Laurin Polla</span></p>
-        <a href="mailto:laurin.polla@yahoo.com" class="contact-button">Kontakt</a>
-    </main>
-    <footer>
-        &copy; 2025 Laurin Polla. Alle Rechte vorbehalten.
-    </footer>
+        <p>Remember my name: <span class="highlight">Laurin Polla</span></p>
+    </div>
 </body>
 </html>
